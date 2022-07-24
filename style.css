@@ -7,6 +7,7 @@
     --card-background: hsl(216, 50%, 16%);
     --line-background: hsl(215, 32%, 27%);
     --white: hsl(0, 0%, 100%);
+    --font-outfit: 'Outfit', sans-serif;
     --body-copy-size: 18px;
     --font-weight-light: 300;
     --font-weight-regular: 400;
@@ -24,6 +25,7 @@ body {
     display: grid;
     min-height: 100vh;
     place-items: center;
+    font-family: var(--font-outfit);
 }
 
 .card {
@@ -43,11 +45,13 @@ body {
 }
 
 .card h2 {
+    color: var(--white);
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
 .card p {
+    color: var(--primary-soft);
     grid-column-start: 1;
     grid-column-end: 3;
 }
@@ -58,14 +62,28 @@ body {
 }
 
 .card .days-left {
+    color: var(--primary-soft);
     text-align: right;
 }
 
+.card .price {
+    color: var(--primary-cyan);
+}
+
 .footer {
+    color: var(--white);
     grid-column-start: 1;
     grid-column-end: 3;
     display: flex;
     align-items: center;
+}
+
+.footer span {
+    color: var(--primary-soft)
+}
+
+.footer .creator{
+    color: var(--white);
 }
 
 
