@@ -64,6 +64,7 @@ body {
     top: 0;
     height: 100%;
     width: 100%;
+    z-index: 1;
     content: url(images/icon-view.svg);
     background-color: var(--primary-cyan-transparent);
     display: flex;
