@@ -12,7 +12,7 @@
     --body-caption: 16px;
     --font-weight-light: 300;
     --font-weight-regular: 400;
-    --font-weight-semi: 600;
+    --font-weight-bold: 600;
 }
 
 *, *::after, *::before {
@@ -50,6 +50,10 @@ body {
     color: var(--white);
     grid-column-start: 1;
     grid-column-end: 3;
+    font-weight: var(--font-weight-bold);
+    margin-top: 0.5rem;
+    height: 28;
+    line-height: 27.7px;
 }
 
 .card p {
@@ -57,24 +61,44 @@ body {
     grid-column-start: 1;
     grid-column-end: 3;
     font-size: var(--body-copy);
-}
-
-.card hr{
-    grid-column-start: 1;
-    grid-column-end: 3;
+    font-weight: var(--font-weight-light);
+    line-height: 26px;
+    margin-bottom: 0.5rem;
+    height: 52;
 }
 
 .card .days-left {
     color: var(--primary-soft);
     font-size: var(--body-caption);
     text-align: right;
+    line-height: 20.2px;
+    height: 20px;
+}
+
+.days-left::before {
+    content: url(./images/icon-clock.svg);
+    height: 100%;
+    vertical-align: middle;
+    margin-right: 0.75ch;
+    line-height: 20.2px;
+    height: 20px;
+}
+
+.price::before {
+    content: url(./images/icon-ethereum.svg);
+    height: 100%;
+    vertical-align: middle;
+    margin-right: 0.75ch;
 }
 
 .card .price {
     color: var(--primary-cyan);
+    font-weight: var(--font-weight-bold);
 }
 
 .footer {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     border-top-color: var(--line-background);
     border-top-width: 1px;
     border-top-style: solid;
@@ -87,6 +111,8 @@ body {
 }
 
 .footer span {
+    line-height: 20.2px;
+    height: 20px;
     color: var(--primary-soft)
 }
 
