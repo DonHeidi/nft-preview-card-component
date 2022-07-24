@@ -51,8 +51,9 @@ body {
     padding: 1.5rem;
 }
 
-.card .hero {
+.hero, .hero img {
     height: 302px;
+    width: 302px;
     position: relative;
     border-radius: 8px;
 }
@@ -149,4 +150,24 @@ body {
     border-radius: 50%;
     border: 1px solid var(--white);
     margin-right: 1rem;
+}
+
+@media screen and (max-width: 375px) {
+
+    .card {
+        width: 327px;
+    }
+
+    .card p {
+        margin-bottom: 0;
+    }
+
+    .hero, .hero img {
+        height: 278px;
+        width: 278px;
+    }
+
+    .footer {
+        margin: 0;
+    }
 }
