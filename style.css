@@ -8,7 +8,8 @@
     --line-background: hsl(215, 32%, 27%);
     --white: hsl(0, 0%, 100%);
     --font-outfit: 'Outfit', sans-serif;
-    --body-copy-size: 18px;
+    --body-copy: 18px;
+    --body-caption: 16px;
     --font-weight-light: 300;
     --font-weight-regular: 400;
     --font-weight-semi: 600;
@@ -26,6 +27,7 @@ body {
     min-height: 100vh;
     place-items: center;
     font-family: var(--font-outfit);
+    font-size: var(--body-caption);
 }
 
 .card {
@@ -54,6 +56,7 @@ body {
     color: var(--primary-soft);
     grid-column-start: 1;
     grid-column-end: 3;
+    font-size: var(--body-copy);
 }
 
 .card hr{
@@ -63,6 +66,7 @@ body {
 
 .card .days-left {
     color: var(--primary-soft);
+    font-size: var(--body-caption);
     text-align: right;
 }
 
@@ -71,11 +75,15 @@ body {
 }
 
 .footer {
+    border-top-color: var(--line-background);
+    border-top-width: 1px;
+    border-top-style: solid;
     color: var(--white);
     grid-column-start: 1;
     grid-column-end: 3;
     display: flex;
     align-items: center;
+    padding-top: 1rem;
 }
 
 .footer span {
@@ -84,6 +92,12 @@ body {
 
 .footer .creator{
     color: var(--white);
+}
+
+.footer .avatar {
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    margin-right: 1rem;
 }
 
 
