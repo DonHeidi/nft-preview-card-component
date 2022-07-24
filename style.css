@@ -3,6 +3,7 @@
 :root {
     --primary-soft: hsl(215, 51%, 70%);
     --primary-cyan: hsl(178, 100%, 50%);
+    --primary-cyan-transparent: hsla(178, 100%, 50%, 0.5);
     --main-background: hsl(217, 54%, 11%);
     --card-background: hsl(216, 50%, 16%);
     --line-background: hsl(215, 32%, 27%);
@@ -41,9 +42,25 @@ body {
 }
 
 .card .hero {
+    height: 302px;
+    position: relative;
     border-radius: 8px;
     grid-column-start: 1;
     grid-column-end: 3;
+}
+
+.card .hero:hover:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    content: url(images/icon-view.svg);
+    background-color: var(--primary-cyan-transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .card h2 {
@@ -54,6 +71,11 @@ body {
     margin-top: 0.5rem;
     height: 28;
     line-height: 27.7px;
+}
+
+.card h2:hover {
+    color: var(--primary-cyan);
+    cursor: pointer;
 }
 
 .card p {
@@ -118,6 +140,11 @@ body {
 
 .footer .creator{
     color: var(--white);
+}
+
+.footer .creator:hover {
+    color: var(--primary-cyan);
+    cursor: pointer;
 }
 
 .footer .avatar {
